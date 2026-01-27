@@ -1,0 +1,439 @@
+/* CSS VARIABLES & RESET */
+:root {
+    --bg-color: #050505;
+    --text-color: #E0E0E0;
+    --dim-text: #888888;
+    --accent-color: #FF3333;
+    --grid-line: #333333;
+    --border-color: #333333;
+    
+    --font-header: 'Arial Black', 'Helvetica Narrow', 'Impact', sans-serif;
+    --font-body: 'Space Mono', 'Courier New', monospace;
+    
+    --padding-std: 2rem;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-body);
+    font-size: 14px;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.2s ease;
+}
+
+/* UTILITIES */
+.highlight {
+    color: var(--accent-color);
+}
+
+/* NAVIGATION */
+.fixed-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    background-color: rgba(5, 5, 5, 0.95);
+    z-index: 1000;
+    padding: 0 var(--padding-std);
+    font-size: 12px;
+}
+
+.logo {
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.nav-right {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-link:hover {
+    color: var(--accent-color);
+}
+
+.nav-num {
+    color: var(--dim-text);
+    margin-right: 5px;
+}
+
+/* LAYOUT & SECTIONS */
+section {
+    border-bottom: 1px solid var(--border-color);
+    position: relative;
+    /* Creating the vertical grid lines visual via repetition if needed, 
+       but for this design we'll use specific borders on children */
+}
+
+.grid-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+}
+
+/* HERO SECTION */
+.hero-section {
+    padding-top: 60px; /* Offset for fixed header */
+}
+
+.hero-text-container {
+    border-right: 1px solid var(--border-color);
+    padding: var(--padding-std);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.hero-title {
+    font-family: var(--font-header);
+    font-size: 5rem;
+    line-height: 0.9;
+    letter-spacing: -2px;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.hero-subcontainer {
+    border-top: 1px solid var(--border-color);
+    padding-top: 2rem;
+    width: 100%;
+}
+
+.hero-label {
+    color: var(--dim-text);
+    font-size: 10px;
+    margin-bottom: 0.5rem;
+}
+
+.hero-status {
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.blinking-cursor::after {
+    content: '_';
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.hero-image-container {
+    position: relative;
+    overflow: hidden;
+    background-color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%) contrast(1.2);
+    /* Make the image look techy */
+}
+
+.hero-image-container::after {
+    /* Grid overlay on image */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(rgba(5,5,5,0) 50%, rgba(5,5,5,0.1) 50%),
+        linear-gradient(90deg, rgba(255,0,0,0.03), rgba(255,0,0,0.03) 1px, transparent 1px);
+    background-size: 100% 4px, 20px 100%;
+    pointer-events: none;
+}
+
+.img-overlay {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    background: rgba(0,0,0,0.7);
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Crosshairs */
+.crosshair {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+}
+.crosshair::before, .crosshair::after {
+    content: '';
+    position: absolute;
+    background-color: var(--accent-color);
+}
+.crosshair.tl { top: 1rem; left: 1rem; border-top: 1px solid var(--accent-color); border-left: 1px solid var(--accent-color); }
+.crosshair.tr { top: 1rem; right: 1rem; border-top: 1px solid var(--accent-color); border-right: 1px solid var(--accent-color); }
+.crosshair.bl { bottom: 1rem; left: 1rem; border-bottom: 1px solid var(--accent-color); border-left: 1px solid var(--accent-color); }
+.crosshair.br { bottom: 1rem; right: 1rem; border-bottom: 1px solid var(--accent-color); border-right: 1px solid var(--accent-color); }
+
+/* ABOUT SECTION */
+.about-section {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+}
+
+.section-header {
+    border-right: 1px solid var(--border-color);
+    padding: var(--padding-std);
+    display: flex;
+    align-items: flex-start;
+}
+
+.section-title {
+    font-family: var(--font-header);
+    font-size: 1.2rem;
+    transform: rotate(-90deg);
+    transform-origin: left top;
+    margin-top: 100px;
+    white-space: nowrap;
+}
+
+.about-content {
+    padding: 4rem var(--padding-std);
+}
+
+.manifesto-text {
+    font-size: 1.5rem;
+    max-width: 800px;
+    margin-bottom: 2rem;
+    letter-spacing: -0.5px;
+}
+
+.stat-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 4rem;
+    border-top: 1px solid var(--border-color);
+    padding-top: 2rem;
+}
+
+.stat-box {
+    border: 1px solid var(--border-color);
+    padding: 1rem;
+    transition: 0.3s;
+}
+
+.stat-box:hover {
+    border-color: var(--accent-color);
+    background: rgba(255, 51, 51, 0.05);
+}
+
+.stat-label {
+    display: block;
+    color: var(--dim-text);
+    font-size: 10px;
+    margin-bottom: 0.5rem;
+}
+
+.stat-value {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+/* PROJECTS SECTION */
+.projects-section {
+    display: grid;
+    grid-template-columns: 200px 1fr; /* Sidebar for title, content for grid */
+}
+
+/* Reusing section-header from above */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.project-card {
+    border-right: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    padding: var(--padding-std);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 400px;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    background: #0a0a0a;
+}
+
+.project-card:hover .project-title {
+    color: var(--accent-color);
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    font-size: 10px;
+    color: var(--dim-text);
+}
+
+.project-title {
+    font-family: var(--font-header);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.project-desc {
+    color: #ccc;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+    flex-grow: 1;
+}
+
+.project-tags {
+    margin-bottom: 2rem;
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.tag {
+    font-size: 10px;
+    border: 1px solid var(--border-color);
+    padding: 4px 8px;
+    text-transform: uppercase;
+}
+
+.btn-main {
+    display: inline-block;
+    border: 1px solid var(--text-color);
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.btn-main:hover {
+    background: var(--accent-color);
+    border-color: var(--accent-color);
+    color: #000;
+}
+
+/* FOOTER */
+.main-footer {
+    padding: 4rem var(--padding-std);
+    text-align: center;
+}
+
+.footer-title {
+    font-family: var(--font-header);
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: var(--dim-text);
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 4rem;
+}
+
+.footer-link {
+    font-size: 1.2rem;
+    border-bottom: 1px solid transparent;
+}
+
+.footer-link:hover {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+}
+
+.copyright {
+    font-size: 10px;
+    color: var(--dim-text);
+}
+
+/* DECORATIONS (+) */
+.grid-split, .projects-grid, nav {
+    position: relative;
+}
+
+/* Add some + symbols via pseudo elements on specific containers if desired, 
+   or manually placed divs for finer control on intersections. 
+   For now, the borders provide the strict structure. 
+*/
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .nav-right {
+        display: none; /* Simple hiding for mobile for now, or hamburger */
+    }
+    
+    .grid-split {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-text-container {
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+        min-height: 50vh;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .about-section, .projects-section {
+        grid-template-columns: 1fr;
+    }
+    
+    .section-header {
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+        padding: 1rem var(--padding-std);
+    }
+    
+    .section-title {
+        transform: none;
+        margin-top: 0;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stat-grid {
+        grid-template-columns: 1fr;
+    }
+}
