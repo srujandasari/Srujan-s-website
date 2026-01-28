@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,20 +9,22 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
 
     <!-- NAVIGATION -->
     <nav class="fixed-nav">
         <div class="nav-left">
-            <span class="logo">SRUJAN DASARI <span class="accent">[CYBER SECURITY]</span></span>
+            <span class="logo">SRUJAN DASARI <span class="accent"> | CYBERSECURITY</span></span>
         </div>
         <div class="nav-right">
-            <a href="#profile" class="nav-link"><span class="nav-num">01</span> PROFILE</a>
-            <a href="#projects" class="nav-link"><span class="nav-num">02</span> PROJECTS</a>
-            <a href="#labs" class="nav-link"><span class="nav-num">03</span> LABS</a>
-            <a href="#contact" class="nav-link"><span class="nav-num">04</span> CONTACT</a>
+            <a href="#profile" class="nav-link">PROFILE</a>
+            <a href="#projects" class="nav-link">PROJECTS</a>
+            <a href="#work" class="nav-link">WORK</a>
+            <a href="#contact" class="nav-link">CONTACT</a>
         </div>
     </nav>
 
@@ -29,21 +32,24 @@
     <section id="profile" class="hero-section grid-split">
         <div class="hero-text-container">
             <h1 class="hero-title">
-                DEFENSIVE /<br>
-                OFFENSIVE /<br>
-                OPERATIONS
+                <span class="highlight">HUNT THREATS</span><br>
+                BUILD DEFENSES<br>
+                <span class="highlight">AUTOMATE SECURITY</span>
             </h1>
             <div class="hero-subcontainer">
                 <p class="hero-label">CURRENT STATUS:</p>
-                <p class="hero-status blinking-cursor">MASTER'S STUDENT @ YESHIVA UNIVERSITY</p>
-                <p class="hero-role">SECURITY ENGINEER / SPLUNK SPECIALIST</p>
+                <p class="hero-status blinking-cursor">MASTER'S GRADUATE @ YESHIVA UNIVERSITY | ACTIVELY SEEKING ROLES
+                </p>
+
+                <!-- NEW SKILL SLIDER -->
+                <div id="skill-slider" class="skill-slider-wrapper"></div>
             </div>
         </div>
         <div class="hero-image-container">
             <img src="assets/profile.jpg" alt="Srujan Dasari - Security Engineer" class="hero-img">
             <div class="img-overlay">
                 <span class="overlay-text">Identity Confirmed: Srujan Dasari</span>
-                <span class="overlay-coords">LAT: 40.7128 / LON: -74.0060</span>
+                <span class="overlay-coords typing-effect">IP : 192.168.0.5</span>
             </div>
             <!-- Decorative Crosshairs -->
             <div class="crosshair tl"></div>
@@ -56,23 +62,24 @@
     <!-- ABOUT SECTION (MANIFESTO) -->
     <section class="about-section">
         <div class="section-header">
-            <h2 class="section-title">01 - IDENTITY</h2>
+            <h2 class="section-title">IDENTITY</h2>
         </div>
         <div class="about-content">
             <p class="manifesto-text">
-                My mission is to secure the digital frontier by distinguishing critical patterns from noise. 
-                With over <span class="highlight">2 years of experience</span> as a Security Engineer, 
-                I specialize in SIEM (Splunk), Threat Detection, and Incident Response.
+                Mission: Secure the digital frontier by distinguishing critical patterns from noise.
+                <span class="highlight">Recent Master's Graduate</span> ready to deploy 2+ years of Security Engineering
+                experience.
+                Specialized in SIEM (Splunk), Threat Detection, and Incident Response.
             </p>
             <p class="manifesto-subtext">
-                I operate at the intersection of human expertise and intelligent automation. 
-                Award-winning researcher in <span class="highlight">AI-driven defense</span>.
+                Operating at the intersection of human expertise and intelligent automation.
+                <span class="highlight">Available for immediate deployment.</span>
             </p>
-            
+
             <div class="stat-grid">
                 <div class="stat-box">
                     <span class="stat-label">ALERTS TRIAGED</span>
-                    <span class="stat-value">100+/Day</span>
+                    <span class="stat-value">15+/Day</span>
                 </div>
                 <div class="stat-box">
                     <span class="stat-label">EDUCATION</span>
@@ -80,7 +87,7 @@
                 </div>
                 <div class="stat-box">
                     <span class="stat-label">SPECIALTY</span>
-                    <span class="stat-value">Threat Hunting</span>
+                    <span class="stat-value">Security Operations</span>
                 </div>
             </div>
         </div>
@@ -89,25 +96,27 @@
     <!-- PROJECTS SECTION -->
     <section id="projects" class="projects-section">
         <div class="section-header">
-            <h2 class="section-title">02 - DEPLOYMENTS</h2>
+            <h2 class="section-title">PROJECTS</h2>
         </div>
         <div class="projects-grid">
-            
+
             <!-- Project 1 -->
             <article class="project-card">
                 <div class="project-header">
                     <span class="project-id">CASE_01</span>
-                    <span class="project-status">AWARD WINNING</span>
+                    <span class="project-status">RESEARCH AWARD</span>
                 </div>
-                <h3 class="project-title">MCP-Enabled Intelligent Cyber Agent</h3>
+                <h3 class="project-title">MCP-Enabled Cybersecurity Automation Agent</h3>
                 <p class="project-desc">
-                    An AI-powered platform autonomously executing security assessments via Model Context Protocol. 
-                    Reduces manual testing time by 90% through intelligent automation.
+                    Developed an MCP server integrating offensive/defensive tools.
+                    <strong>Achievement:</strong> Created automated workflows bridging red/blue teams, reducing manual
+                    testing time by 90%.
+                    <br><span class="highlight">Outstanding Research Presentation Award</span>
                 </p>
                 <div class="project-tags">
-                    <span class="tag">AI/ML</span>
-                    <span class="tag">Automation</span>
-                    <span class="tag">Python</span>
+                    <span class="tag">MCP</span>
+                    <span class="tag">AI SECURITY</span>
+                    <span class="tag">RED/BLUE TEAM</span>
                 </div>
                 <a href="#" class="btn-main">VIEW CASE STUDY</a>
             </article>
@@ -118,58 +127,119 @@
                     <span class="project-id">CASE_02</span>
                     <span class="project-status">DEPLOYED</span>
                 </div>
-                <h3 class="project-title">Splunk Threat Detection Ecosystem</h3>
+                <h3 class="project-title">Elastic SIEM Dashboard for Network Monitoring</h3>
                 <p class="project-desc">
-                    Refined correlation rules to reduce MTTR. Conducted deep log analysis for IOC identification 
-                    across enterprise environments.
+                    Designed Elastic SIEM dashboards to detect network anomalies.
+                    <strong>Achievement:</strong> Reduced alert fatigue by 25% through optimized filtering and
+                    centralized log visibility.
                 </p>
                 <div class="project-tags">
-                    <span class="tag">Splunk</span>
-                    <span class="tag">SIEM</span>
-                    <span class="tag">Blue Team</span>
+                    <span class="tag">ELASTIC SIEM</span>
+                    <span class="tag">THREAT DETECTION</span>
+                    <span class="tag">LOG ANALYSIS</span>
                 </div>
-                <a href="#" class="btn-main">VIEW ARCHIVE</a>
+                <a href="#" class="btn-main">VIEW DASHBOARD</a>
             </article>
 
             <!-- Project 3 -->
             <article class="project-card">
                 <div class="project-header">
                     <span class="project-id">CASE_03</span>
-                    <span class="project-status">SIMULATION</span>
+                    <span class="project-status">INFRASTRUCTURE</span>
                 </div>
-                <h3 class="project-title">Threat Hunting Simulations</h3>
+                <h3 class="project-title">AWS Cloud Network Architecture & VPC Configuration</h3>
                 <p class="project-desc">
-                    Completed 50+ Hack The Box challenges and Cyberbit simulations. 
-                    Executed offensive maneuvering to understand defensive gaps.
+                    Deployed secure VPC architectures aligned with NIST/CIS best practices.
+                    <strong>Achievement:</strong> Segmented workloads with subnets, route tables, and security groups
+                    for enterprise-grade security.
                 </p>
                 <div class="project-tags">
-                    <span class="tag">Hack The Box</span>
-                    <span class="tag">Pen Testing</span>
-                    <span class="tag">Network Analysis</span>
+                    <span class="tag">AWS</span>
+                    <span class="tag">CLOUD SECURITY</span>
+                    <span class="tag">NETWORKING</span>
                 </div>
-                <a href="#" class="btn-main">VIEW LOGS</a>
+                <a href="#" class="btn-main">VIEW ARCHITECTURE</a>
             </article>
 
-             <!-- Project 4 (Placeholder for Resume Tailoring if desired, using generic for now) -->
-             <article class="project-card">
+            <!-- Project 4 -->
+            <article class="project-card">
                 <div class="project-header">
                     <span class="project-id">CASE_04</span>
-                    <span class="project-status">TOOLING</span>
+                    <span class="project-status">COMPLIANCE</span>
                 </div>
-                <h3 class="project-title">N8N Workflows</h3>
+                <h3 class="project-title">HIPAA-Compliant Medication Reminder Application</h3>
                 <p class="project-desc">
-                    Advanced automation workflows for process optimization and data handling.
+                    Developed a secure app with AWS WAF and encryption for PHI.
+                    <strong>Achievement:</strong> Implemented multi-layered security (DDoS protection, audit logging)
+                    ensuring full HIPAA compliance.
                 </p>
                 <div class="project-tags">
-                    <span class="tag">N8N</span>
-                    <span class="tag">Workflow</span>
-                    <span class="tag">API</span>
+                    <span class="tag">GRC</span>
+                    <span class="tag">HIPAA</span>
+                    <span class="tag">APPSEC</span>
                 </div>
-                <a href="#" class="btn-main">VIEW WORKFLOW</a>
+                <a href="#" class="btn-main">VIEW APP SECURITY</a>
             </article>
 
         </div>
     </section>
+
+    <!-- WORK SECTION -->
+    <section id="work" class="projects-section">
+        <div class="section-header">
+            <h2 class="section-title">WORK</h2>
+        </div>
+        <div class="projects-grid">
+            <!-- Work content will go here -->
+            <!-- Work 1 -->
+            <article class="project-card">
+                <div class="project-header">
+                    <span class="project-id">YESHIVA UNIV</span>
+                    <span class="project-status">2024 - 2025</span>
+                </div>
+                <h3 class="project-title">IT Staff</h3>
+                <div class="project-desc" style="font-size: 0.9em; margin-bottom: 1rem; color: #888;">
+                    <ul style="list-style-type: none; padding-left: 0;">
+                        <li style="margin-bottom: 0.5rem;">> Monitored network traffic/security systems and escalated
+                            complex incidents.</li>
+                        <li style="margin-bottom: 0.5rem;">> Resolved TCP/IP, DNS, VPN, and endpoint security issues for
+                            faculty/staff.</li>
+                        <li style="margin-bottom: 0.5rem;">> Configured firewalls & AV on Windows/Linux; ensured
+                            compliance.</li>
+                    </ul>
+                </div>
+                <div class="project-tags">
+                    <span class="tag">Network Security</span>
+                    <span class="tag">Incident Response</span>
+                    <span class="tag">ServiceNow</span>
+                </div>
+            </article>
+
+            <!-- Work 2 -->
+            <article class="project-card">
+                <div class="project-header">
+                    <span class="project-id">SYNDICATE</span>
+                    <span class="project-status">2022 - 2024</span>
+                </div>
+                <h3 class="project-title">Security Engineer</h3>
+                <div class="project-desc" style="font-size: 0.9em; margin-bottom: 1rem; color: #888;">
+                    <ul style="list-style-type: none; padding-left: 0;">
+                        <li style="margin-bottom: 0.5rem;">> Triaged daily Splunk alerts; distinguished threats from
+                            false positives.</li>
+                        <li style="margin-bottom: 0.5rem;">> Conducted vulnerability scans & implemented remediation
+                            controls.</li>
+                        <li style="margin-bottom: 0.5rem;">> Managed IAM/MFA in Active Directory & Azure Entra ID.</li>
+                    </ul>
+                </div>
+                <div class="project-tags">
+                    <span class="tag">Splunk SIEM</span>
+                    <span class="tag">Vulnerability Mgmt</span>
+                    <span class="tag">Azure/IAM</span>
+                </div>
+            </article>
+        </div>
+    </section>
+
 
     <!-- FOOTER -->
     <footer id="contact" class="main-footer">
@@ -177,8 +247,8 @@
             <h2 class="footer-title">INITIATE PROTOCOL</h2>
             <div class="footer-links">
                 <a href="https://www.linkedin.com/in/srujandasari" target="_blank" class="footer-link">LINKEDIN</a>
-                <a href="https://github.com" target="_blank" class="footer-link">GITHUB</a>
-                <a href="mailto:email@example.com" class="footer-link">SECURE TRANSMISSION</a>
+                <a href="https://github.com/srujandasari" target="_blank" class="footer-link">GITHUB</a>
+                <a href="mailto:srujandasari1@gmail.com" class="footer-link">EMAIL</a>
             </div>
             <p class="copyright">
                 SYSTEM STATUS: ONLINE // © 2026 SRUJAN DASARI
@@ -186,5 +256,7 @@
         </div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
+
 </html>
