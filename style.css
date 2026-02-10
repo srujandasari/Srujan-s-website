@@ -182,7 +182,10 @@ section {
 .img-overlay {
     position: absolute;
     bottom: 2rem;
-    left: 2rem;
+    left: auto;
+    /* Force override */
+    right: 2rem;
+    text-align: right;
     background: rgba(0, 0, 0, 0.7);
     padding: 0.5rem 1rem;
     border: 1px solid var(--accent-color);
@@ -190,6 +193,71 @@ section {
     font-size: 10px;
     display: flex;
     flex-direction: column;
+}
+
+.scan-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--accent-color);
+    box-shadow: 0 0 10px var(--accent-color);
+    animation: scan 6s ease-in-out infinite;
+    /* 1s down + 1s up + 4s wait = 6s total */
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+@keyframes scan {
+    0% {
+        top: 0%;
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 1;
+    }
+
+    16.66% {
+        top: 100%;
+        /* 1s / 6s = ~16.6% */
+    }
+
+    33.33% {
+        top: 0%;
+        /* 2s / 6s = ~33.3% */
+        opacity: 1;
+    }
+
+    35% {
+        opacity: 0;
+    }
+
+    100% {
+        top: 0%;
+        opacity: 0;
+        /* Wait for remaining 4s */
+    }
+}
+
+.analysis-report {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    /* Bottom-left as requested */
+    color: var(--accent-color);
+    font-size: 10px;
+    font-weight: 700;
+    border: 1px solid var(--accent-color);
+    padding: 0.5rem 1rem;
+    background: rgba(0, 0, 0, 0.7);
+    text-transform: uppercase;
+}
+
+.analysis-report:hover {
+    background: var(--accent-color);
+    color: #000;
 }
 
 /* Crosshairs */
@@ -244,17 +312,34 @@ section {
     border-right: 1px solid var(--border-color);
     padding: var(--padding-std);
     display: flex;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    min-height: 400px;
+    /* Needs height for vertical text */
 }
 
 .section-title {
     font-family: var(--font-header);
-    font-size: 1.2rem;
-    transform: rotate(-90deg);
-    transform-origin: left top;
-    margin-top: 100px;
+    font-size: 5rem;
+    width: 100vh;
+    /* Make it wide enough to not wrap */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    margin: 0;
     white-space: nowrap;
+    text-align: center;
 }
+
+/* 
+   We don't need the specific #work-title size override anymore 
+   since the user wants standard alignment for all, 
+   but I'll keep the ID in HTML just in case they want to change it later.
+   I will remove the specific font-size rule here so they all match unless requested. 
+*/
 
 .about-content {
     padding: 4rem var(--padding-std);
