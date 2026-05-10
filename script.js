@@ -1,30 +1,38 @@
 const skillData = [
     {
-        category: "NETWORKING",
+        category: "PENETRATION TESTING",
         skills: [
-            "OSI & TCP/IP models", "IP addressing & subnetting", "DNS, DHCP, NAT", "VLANs, VPNs",
-            "Routing & Switching (OSPF, BGP)", "Network Troubleshooting", "Port Scanning", "Wireshark", "Packet Capture"
+            "Web Application Pentesting", "Mobile (Android/iOS) Pentesting", "Network Pentesting",
+            "Cloud Security Testing", "Ethical Hacking", "Vulnerability Assessment",
+            "Proof-of-Concept Development", "Fuzzing", "Reverse Engineering"
         ]
     },
     {
-        category: "SECURITY OPERATIONS",
+        category: "SECURITY TOOLS",
         skills: [
-            "Splunk", "Elastic SIEM", "Suricata & Snort", "Firewalls (Cisco ASA, Azure, AWS WAF)",
-            "Threat Hunting", "Incident Response", "Vulnerability Management", "Nmap & Metasploit"
+            "Burp Suite", "Nmap", "Metasploit", "Wireshark", "Frida", "MobSF",
+            "OWASP ZAP", "Nikto", "Hydra", "SQLmap", "Nessus", "Splunk", "Elastic SIEM"
         ]
     },
     {
-        category: "CLOUD INFRASTRUCTURE",
+        category: "NETWORKING & STANDARDS",
         skills: [
-            "AWS (VPC, EC2, IAM, CloudWatch)", "Azure (VNet, Entra ID, NSG)", "Cloud Security",
-            "Network ACLs", "Security Groups", "DDoS Protection"
+            "TCP/IP", "DNS", "VLANs", "Routing & Switching", "Firewalls (Cisco ASA, UFW)",
+            "IDS/IPS", "VPNs", "OWASP Top 10", "OWASP MASVS", "MITRE ATT&CK", "NIST CSF", "PTES"
         ]
     },
     {
-        category: "AI & AUTOMATION",
+        category: "CLOUD & INFRASTRUCTURE",
         skills: [
-            "Python Scripting", "Bash & PowerShell", "N8N Automation", "Model Context Protocol (MCP)",
-            "AI Agent Development", "API Integration"
+            "AWS (VPC, EC2, IAM, Security Groups)", "Linux/Unix", "Windows",
+            "Active Directory", "CI/CD Security"
+        ]
+    },
+    {
+        category: "PROGRAMMING & AI SECURITY",
+        skills: [
+            "Python", "Bash", "SQL (PostgreSQL)", "PowerShell", "AI Agents",
+            "Agentic Workflows", "Model Context Protocol (MCP)", "n8n", "IBM Watson", "LLM Security"
         ]
     }
 ];

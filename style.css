@@ -384,6 +384,90 @@ section {
     font-size: 1.2rem;
 }
 
+/* SKILLS SECTION */
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.skill-category {
+    border-right: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    padding: var(--padding-std);
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s;
+    position: relative;
+}
+
+.skill-category:hover {
+    background: #0a0a0a;
+}
+
+.skill-category:hover .skill-cat-title {
+    color: var(--accent-color);
+}
+
+.skill-category:hover .skill-cat-id {
+    color: var(--text-color);
+}
+
+.skill-category.full-span {
+    grid-column: 1 / -1;
+    min-height: auto;
+}
+
+.skill-cat-header {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.skill-cat-id {
+    font-family: var(--font-body);
+    font-size: 11px;
+    color: var(--accent-color);
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+.skill-cat-title {
+    font-family: var(--font-header);
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--text-color);
+    transition: color 0.3s;
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.skill-pill {
+    font-size: 11px;
+    border: 1px solid var(--border-color);
+    padding: 6px 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #ccc;
+    background: rgba(20, 20, 20, 0.4);
+    transition: 0.2s;
+}
+
+.skill-pill:hover {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+    background: rgba(255, 51, 51, 0.05);
+}
+
 /* PROJECTS SECTION */
 .projects-section {
     display: grid;
@@ -555,6 +639,14 @@ nav {
 
     .projects-grid {
         grid-template-columns: 1fr;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-category {
+        min-height: auto;
     }
 
     .stat-grid {
