@@ -428,8 +428,8 @@ section {
 }
 
 .skill-cat-id {
-    font-family: var(--font-body);
-    font-size: 11px;
+    font-family: var(--font-header);
+    font-size: 1.3rem;
     color: var(--accent-color);
     font-weight: 700;
     letter-spacing: 1px;
